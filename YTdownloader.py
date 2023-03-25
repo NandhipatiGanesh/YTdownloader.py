@@ -1,8 +1,5 @@
-import os
-import platform
 import streamlit as st
 from pytube import YouTube
-from pytube.exceptions import *
 
 st.title("YouTube Video Downloader")
 
@@ -18,18 +15,7 @@ if st.button("Download"):
 
         # Download the video
         st.write("Downloading video...")
-        if platform.system() == "Windows":
-            download_path = os.path.join(os.path.expanduser("~"), "Downloads")
-        elif platform.system() == "Darwin":
-            download_path = os.path.join(os.path.expanduser("~"), "Downloads")
-        elif platform.system() == "Linux":
-            download_path = os.path.join(os.path.expanduser("~"), "Downloads")
-        elif platform.system() == "Android":
-            download_path = os.path.join(os.path.expanduser("~"), "Download")
-        elif platform.system() == "iOS":
-            download_path = os.path.join(os.path.expanduser("~"),)
-            
         stream.download()
-        st.write("The video is downloaded")    
+        st.write("Video downloaded successfully!")
     except:
-          st.write("Invalid URL or some error occurred.")    
+        st.write("Invalid URL or some error occurred.")
