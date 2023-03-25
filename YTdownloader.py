@@ -1,21 +1,21 @@
 import streamlit as st
 from pytube import YouTube
 
-st.title("YouTube Video Downloader")
+# set up the Streamlit app
+st.title("YouTube Downloader")
 
-# Get video URL input from user
-url = st.text_input("Enter the YouTube video URL:")
+# allow user to input the video URL
+url = st.text_input("Enter the YouTube video URL")
 
-# Download the video if URL is valid and download button is clicked
+# when the user clicks the download button
 if st.button("Download"):
-    try:
-        # Create YouTube object and get the highest resolution stream
-        yt = YouTube(url)
-        stream = yt.streams.get_highest_resolution()
 
-        # Download the video
-        st.write("Downloading video...")
-        stream.download()
-        st.write("Video downloaded successfully!")
-    except:
-        st.write("Invalid URL or some error occurred.")
+    # download the video
+    yt = YouTube(url)
+    video = yt.streams.get_highest_resolution()
+    video_file = video.download()
+
+    # save the downloaded video to the user's device
+    with open(video_file, 'rb') as f:
+        video_bytes = f.read()
+    st.download_button(label='Download Video', data=video_bytes, file_name='my_video.mp4')
