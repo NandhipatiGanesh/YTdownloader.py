@@ -1,5 +1,7 @@
 import streamlit as st
 from pytube import YouTube
+import streamlit.components.v1 as components
+import fontawesome as fa
 
 # set up the Streamlit app
 st.title("YouTube Downloader")
@@ -22,9 +24,10 @@ if st.button("Download"):
     
 
 #display text 
-with st.expander("**YouTube Audio Downloader**"):
+with st.expander("**More Downloaders**"):
      st.write("• [**AudioDownloader**](https://nandhipatiganesh-ytaudiodownloader-py-downloader-j7w1w3.streamlit.app/)")
-     st.write("This apps take time to open and also for downloading files also")
+     st.write("• Instagram Reels Downloader is available click on left sidebar and select there")
+     st.write("• This apps take time to open and also for downloading files also")
      
    
 

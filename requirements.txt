@@ -1,3 +1,13 @@
 streamlit
 pytube
 moviepy
+
+instaloader
+requests
+os
+selenium
+
+fontawesome
+components.v1
+
+
