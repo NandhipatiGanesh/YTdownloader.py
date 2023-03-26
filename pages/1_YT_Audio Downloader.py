@@ -25,6 +25,7 @@ if st.button("Download Audio"):
     with open(audio_file, 'rb') as f:
         audio_bytes = f.read()
     st.download_button(label='Download Audio', data=audio_bytes, file_name='my_audio.mp3')
+    st.success('Downloading Success', icon="✅")
     
     #add a footer 
 

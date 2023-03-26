@@ -21,6 +21,7 @@ if st.button("Download"):
     with open(video_file, 'rb') as f:
         video_bytes = f.read()
     st.download_button(label='Download Video', data=video_bytes, file_name='my_video.mp4')
+    st.success('Successfully Downloaded', icon="✅")
     
 
 #display text 

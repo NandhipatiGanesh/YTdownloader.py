@@ -31,6 +31,7 @@ post_url = st.text_input("Enter the Instagram post URL:")
 # create a button to download the video
 if st.button("Download Video"):
     download_video(post_url)
+    st.success('Now Ready to Download', icon="✅")
 
 
 #add a footer 
