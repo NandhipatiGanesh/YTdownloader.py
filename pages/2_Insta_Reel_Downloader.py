@@ -20,6 +20,17 @@ def download_video(post_url):
     # create a file downloader for the user to save the video file
     st.download_button(label="Download Video", data=video_bytes, file_name="my_video.mp4", mime="video/mp4")
 
+st.set_page_config(
+    page_title="Instagram Downloader",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 # create the Streamlit app
 st.title("Instagram Video Downloader")
 instagram_icon = fa.icons['instagram']

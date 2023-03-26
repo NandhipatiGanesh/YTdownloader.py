@@ -2,6 +2,20 @@ import streamlit as st
 from pytube import YouTube
 import moviepy.editor as mp
 
+
+st.set_page_config(
+    page_title="YouTube Audio Downloader",
+    page_icon="🎵",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+
 # set up the Streamlit app
 st.title("YouTube Downloader")
 
