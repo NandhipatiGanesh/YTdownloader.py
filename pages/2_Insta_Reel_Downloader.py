@@ -2,8 +2,6 @@ import instaloader
 import requests
 import streamlit as st
 
-
-
 # create a function to download the video
 def download_video(post_url):
     # create an instance of Instaloader
@@ -19,21 +17,8 @@ def download_video(post_url):
     # create a file downloader for the user to save the video file
     st.download_button(label="Download Video", data=video_bytes, file_name="my_video.mp4", mime="video/mp4")
 
-st.set_page_config(
-    page_title="Instagram Downloader",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
 # create the Streamlit app
 st.title("Instagram Video Downloader")
-
-
 
 # get the post URL from the user
 post_url = st.text_input("Enter the Instagram post URL:")
@@ -41,7 +26,15 @@ post_url = st.text_input("Enter the Instagram post URL:")
 # create a button to download the video
 if st.button("Download Video"):
     download_video(post_url)
-    st.success('Now Ready to Download', icon="✅")
+
+
+
+
+
+
+
+
+
 
 
 #add a footer 
