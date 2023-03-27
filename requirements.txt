@@ -4,7 +4,6 @@ moviepy
 
 instaloader
 requests
-os
 selenium
 
 fontawesome
