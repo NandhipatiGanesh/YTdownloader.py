@@ -1,9 +1,6 @@
 import streamlit as st
 from pytube import YouTube
-import streamlit.components.v1 as components
-import fontawesome as fa
 
-import streamlit as st
 
 st.set_page_config(
     page_title="YouTube Video Downloader",
