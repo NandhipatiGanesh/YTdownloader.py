@@ -6,7 +6,6 @@ instaloader
 requests
 selenium
 
-fontawesome
-components.v1
+
 
 
