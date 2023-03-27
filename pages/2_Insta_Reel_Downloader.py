@@ -1,8 +1,7 @@
 import instaloader
 import requests
 import streamlit as st
-import streamlit.components.v1 as components
-import fontawesome as fa
+
 
 
 # create a function to download the video
@@ -33,7 +32,7 @@ st.set_page_config(
 
 # create the Streamlit app
 st.title("Instagram Video Downloader")
-instagram_icon = fa.icons['instagram']
+
 
 
 # get the post URL from the user
