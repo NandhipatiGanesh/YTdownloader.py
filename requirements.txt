@@ -4,11 +4,7 @@ moviepy
 
 instaloader
 requests
-selenium
-bs4
-BeautifulSoup
-urllib.request
-os
+
 
 
 
